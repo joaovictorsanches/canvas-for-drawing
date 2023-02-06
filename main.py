@@ -25,7 +25,10 @@ def Pixel(display, pos):
 	for i in range(1, 5):
 		status = False
 		test =[display, preto, (pos[0], pos[1]), 10+i, 40+i]
-		lista_de_pixel.append(test)
+		try: 
+			lista_de_pixel.index(test) 
+		except:
+			lista_de_pixel.append(test)
 
 cont_limpa = 0
 break_soma = 5
